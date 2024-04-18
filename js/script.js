@@ -22,8 +22,21 @@ track.addEventListener("ended", function() {
 
 
 
+// Menu scroll
 
-function test() {
-    console.log("Madina The Best");
-}
+// Smooth scrolling effect for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        const target = document.querySelector(this.getAttribute('href'));
+        const offset = 80; // Adjust this value as needed to offset the scroll position
+
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        }
+    });
+});

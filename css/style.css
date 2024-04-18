@@ -45,7 +45,11 @@
     box-sizing: inherit;
     scroll-behavior: smooth;
     height: -webkit-fill-available;
+    scroll-behavior: smooth;
+
  }
+
+
  
  body {
    font-family: 'e Explosive Attack', sans-serif;
