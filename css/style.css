@@ -591,18 +591,18 @@
 }
 
 
-footer {
+section:last-child {
    background-color: hsl(213, 23%, 8%);
 
 }
 
-footer ul  {
+section ul  {
    display: flex;
    padding-top: 40px;
 
 }
 
-footer ul li {
+section ul li {
    margin-right: 15px;
    width: 30%;
    padding: 10px;
@@ -610,7 +610,7 @@ footer ul li {
    border: 1px solid rgba(238,201,12,255);
 }
 
-footer ul li img {
+section ul li img {
    width: 100%;
    height: 100%;
 }

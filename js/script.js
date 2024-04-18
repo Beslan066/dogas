@@ -25,18 +25,13 @@ track.addEventListener("ended", function() {
 // Menu scroll
 
 // Smooth scrolling effect for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.menu-link');
+    const sections = document.querySelectorAll('section');
 
-        const target = document.querySelector(this.getAttribute('href'));
-        const offset = 80; // Adjust this value as needed to offset the scroll position
-
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - offset,
-                behavior: 'smooth'
-            });
-        }
+    menuItems.forEach((item, index) => {
+        item.addEventListener('click', function() {
+            sections[index + 1].scrollIntoView({ behavior: 'smooth' });
+        });
     });
 });
